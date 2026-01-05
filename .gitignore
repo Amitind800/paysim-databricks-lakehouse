@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+
+# Databricks
+.databricks/
+*.dbc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter / Spark
+.ipynb_checkpoints/
+
+# Logs
+*.log

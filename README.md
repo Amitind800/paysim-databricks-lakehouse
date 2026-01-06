@@ -43,6 +43,12 @@ Key columns:
 - No business logic applied
 - Stored in Delta Lake format
 
+## Notebook
+- Bronze ingestion | [01_bronze_ingestion.py](notebooks/01_bronze_ingestion.py)
+  
+## Execution Output
+- [Bronze Sample](Screenshots/Bronze.png)
+
 ## Silver Layer – Cleaning & Transformation
 Applied:
 - Schema enforcement
@@ -50,10 +56,22 @@ Applied:
 - Business rules (amount > 0)
 - Data quality checks (nulls, invalid values)
 
+## Notebook
+- Silver transformation | [02_silver_transformation.py](notebooks/02_silver_transformation.py)
+
+## Execution Output
+- [Silver Sample](Screenshots/silver.png)
+
 ## Gold Layer – Analytics & Aggregation
 Produced analytics-ready datasets:
 - Fraud metrics by transaction type
 - Transaction volume and amount summaries
+
+## Notebook
+- Gold aggregation | [03_gold_aggregations.py](notebooks/03_gold_aggregations.py)
+
+## Execution Output
+- [Gold Sample](Screenshots/gold.png)
 
 ## Incremental Load Strategy
 - Used `step` column as a time surrogate
@@ -91,4 +109,9 @@ All validations were enforced at the Silver layer.
 - Build BI dashboards on Gold layer
 - Implement alerting on fraud spikes
 
+##  How to Run Locally / in Databricks
+1. Clone repo
+2. Upload Notebooks to Databricks
+3. Upload PaySim CSV
+4. Run notebooks in order: 01 → 02 → 03
 

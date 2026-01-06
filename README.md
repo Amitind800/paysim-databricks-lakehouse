@@ -6,7 +6,6 @@ The pipeline ingests raw financial transaction data, cleans and validates it, an
 
 Dataset Used: *PaySim – Synthetic Financial Dataset for Fraud Detection (Kaggle)*
 
--
 
 ## Architecture
 [Lakehouse Architecture](architecture/lakehouse_architecture.png)
@@ -16,7 +15,6 @@ The pipeline follows a layered Lakehouse design:
 - *Silver*: Cleaned and validated data
 - *Gold*: Aggregated business metrics
 
--
 
 ## Tech Stack
 - Databricks Community Edition
@@ -24,8 +22,6 @@ The pipeline follows a layered Lakehouse design:
 - Delta Lake
 - Python
 - GitHub
-
--
 
 ## Data Source
 *PaySim Synthetic Financial Dataset*
@@ -41,7 +37,6 @@ Key columns:
 - nameDest
 - isFraud
 
--
 
 ## Bronze Layer – Raw Ingestion
 - Ingested CSV data as-is
